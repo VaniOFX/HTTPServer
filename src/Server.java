@@ -24,7 +24,7 @@ public class Server {
 	public void start(){
 		try(ServerSocket serverSocket = new ServerSocket(portNumber)){
 			while(true) {
-				System.out.println("Listening for connections");
+				System.out.println("Listening for connections\n");
 				new ConnectionThread(serverSocket.accept()).start();
 			}
 		}
